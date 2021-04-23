@@ -15,9 +15,14 @@ import pickle
 with open("intents.json") as file:
     data = json.load(file) # storing the data in a variable
 
+# if the model is already trained
+# if the trained file already exists do not train again
 try:
     with open("data.pickle","rb") as f:
         words,labels,training,output = pickle.load(f)
+
+# otherwise run it all again
+# train the model again
 except:
 # declaring some blank lists
 # these will be used later to talk to the bot
@@ -89,6 +94,7 @@ except:
     training = numpy.array(training)
     output = numpy.array(output)
     
+    # run it and save the model to the file
     with open("data.pickle","wb") as f:
         pickle.dump((words,labels,training,output),f)
     #tf.reset_default_graph()
@@ -104,42 +110,62 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)# train the model
 
+# load the model
+# if the model is there, fine
 try:
     model.load("model.tflearn")
+
+# if model is not found train it
 except:
 # Saving the model and printing its epoch
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
     model.save("model.tflearn")
 
 def bag_of_words(s, words):
-    bag = [0 for _ in range(len(words))]
+    bag = [0 for _ in range(len(words))]# creating blank bag of words list
 
     s_words = nltk.word_tokenize(s)
+    
+    # change the elements according to if the word exists or not
     s_words = [stemmer.stem(word.lower()) for word in s_words]
-
+    
+    # generate the bag list properly
     for se in s_words:
         for i, w in enumerate(words):
+            
+            # if the word we are looking is there in the se
+            # make it 1
             if w == se:
                 bag[i] = 1
             
-    return numpy.array(bag)
+    return numpy.array(bag)# return the bag of words
 
-
+# this method will be our customer agent bot
+# this method is going to resposible for chatting
 def chat():
     print("Start talking with the bot (type quit to stop)!")
     while True:
         inp = input("You: ")
-        if inp.lower() == "quit":
+        if inp.lower() == "quit":# if the user enters quit then exit
             break
 
+        # pass in the inout with the bag of words list
+        # this will give us back a probability
         results = model.predict([bag_of_words(inp, words)])
+        
+        # get the maximum probabilty result's index
+        # that particular index should be the response
         results_index = numpy.argmax(results)
+       
+        # this will find the label from the labels list
         tag = labels[results_index]
 
+        # from the intents find the tag 
         for tg in data["intents"]:
             if tg['tag'] == tag:
-                responses = tg['responses']
+                responses = tg['responses']# get responses using the tag
 
+        # get a random response under the tag
         print(random.choice(responses))
 
 # call the method to run the bot
