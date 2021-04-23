@@ -6,7 +6,7 @@ stemmer = LancasterStemmer()
 # importing modules
 import numpy
 import tflearn
-import tensorflow as tf
+import tensorflow
 import random
 import json
 import pickle
@@ -97,7 +97,7 @@ except:
     # run it and save the model to the file
     with open("data.pickle","wb") as f:
         pickle.dump((words,labels,training,output),f)
-    #tf.reset_default_graph()
+    #tensorflow.reset_default_graph()
 
 # the model
 # basically the neural network is going to look at our bag of words
@@ -151,7 +151,7 @@ def chat():
 
         # pass in the inout with the bag of words list
         # this will give us back a probability
-        results = model.predict([bag_of_words(inp, words)])
+        results = model.predict([bag_of_words(inp, words)])[0]
         
         # get the maximum probabilty result's index
         # that particular index should be the response
@@ -159,14 +159,19 @@ def chat():
        
         # this will find the label from the labels list
         tag = labels[results_index]
-
-        # from the intents find the tag 
-        for tg in data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']# get responses using the tag
-
-        # get a random response under the tag
-        print(random.choice(responses))
+        
+        # if the probability is over a certain number
+        # then move forward otherwise "I do not understand"
+        if results[results_index] > 0.7:
+            # from the intents find the tag 
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']# get responses using the tag
+    
+            # get a random response under the tag
+            print(random.choice(responses))
+        else:
+            print("I do not understand,please try again!")
 
 # call the method to run the bot
 chat()
