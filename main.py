@@ -1,177 +1,103 @@
-# importing modules
+# importing necessary packages
 import nltk
-from nltk.stem.lancaster import LancasterStemmer
-stemmer = LancasterStemmer()
-
-# importing modules
-import numpy
-import tflearn
-import tensorflow
-import random
+# nltk.download('wordnet')
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
 import json
 import pickle
 
-# loading the json data
-with open("intents.json") as file:
-    data = json.load(file) # storing the data in a variable
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+from keras.optimizers import SGD
+import random
 
-# if the model is already trained
-# if the trained file already exists do not train again
-try:
-    with open("data.pickle","rb") as f:
-        words,labels,training,output = pickle.load(f)
+words=[]
+classes = []
+documents = []
+ignore_words = ['?', '!']
+data_file = open('intents.json').read()
+intents = json.loads(data_file)
 
-# otherwise run it all again
-# train the model again
-except:
-# declaring some blank lists
-# these will be used later to talk to the bot
-# these lists will store the patterns
-    words = []
-    labels = []
-    docs_x = []
-    docs_y = []
+# preprocessing the data
+# tokenizing the patterns to words
+# append each word to words list
+for intent in intents['intents']:
+    for pattern in intent['patterns']:
 
-# this loop will go over the data and extract the data required
-# for each pattern we turn it into a list of words
-# add the patterns and its associated tags relatively
-    for intent in data["intents"]:
-        for pattern in intent["patterns"]:
-            wrds = nltk.word_tokenize(pattern)# patterns to words using the tokenizer
-            words.extend(wrds)
-            docs_x.append(wrds)# adding the pattern
-            docs_y.append(intent["tag"])# adding docs_x reated tags
-    
-        if intent["tag"] not in labels:
-            labels.append(intent["tag"])# if the tag is not labels add it
-    
-    # using stemmer to find a more general meaning of the voucablory 
-    # this will be easier to scale down the model and make it more accurate
-    words = [stemmer.stem(w.lower()) for w in words if w != "?"]
-    words = sorted(list(set(words)))# sorting the stemmed words
-    
-    labels = sorted(labels)# labels will be upadted as the stemmed words
-    
-    # declaring the training and output list 
-    training = []
-    output = []
-    
-    # converting a string to number using 0 
-    out_empty = [0 for _ in range(len(labels))]
-    
-    # using enumerate to obtain an indexed list
-    for x, doc in enumerate(docs_x):
-        bag = []# declaring bag for bag of words
-        
-        # stemming down the words in doc
-        wrds = [stemmer.stem(w.lower()) for w in doc]
-    
-        # neural networks do not work with strings
-        # they need numbers to work with
-        # hence if the word is present in the list it will be marked 1
-        # if not present it will be marked 0
-        # this is because the words present are lost due to stemming
-        # we only know the words present in our models vocab
-        for w in words:
-            if w in wrds:
-                bag.append(1)# word present
-            else:
-                bag.append(0)# word not present
-    
-        # making a copy of the list 
-        output_row = out_empty[:]
-        
-        # look in the labels list and check tag and set it to 1 in the output_row
-        output_row[labels.index(docs_y[x])] = 1
-    
-        # add the bag of words to training
-        training.append(bag)
-        
-        # add the output row to the list which has all the 1's and 0's
-        output.append(output_row)
-    
-    # creating the array for training and output data
-    training = numpy.array(training)
-    output = numpy.array(output)
-    
-    # run it and save the model to the file
-    with open("data.pickle","wb") as f:
-        pickle.dump((words,labels,training,output),f)
-    #tensorflow.reset_default_graph()
+        # tokenize each word
+        w = nltk.word_tokenize(pattern)
+        words.extend(w)
+        # add documents in the corpus
+        documents.append((w, intent['tag']))
 
-# the model
-# basically the neural network is going to look at our bag of words
-# it is then going to give it a class it belongs to (tag)
-net = tflearn.input_data(shape=[None, len(training[0])])# defining the input shape for our model
-net = tflearn.fully_connected(net, 8)# have 8 neurons for the hidden layer for the input
-net = tflearn.fully_connected(net, 8)# another hidden layer with 8 neurons 
-net = tflearn.fully_connected(net, len(output[0]), activation="softmax")# allows us to get probabilities for each output
-net = tflearn.regression(net)
+        # add to our classes list
+        if intent['tag'] not in classes:
+            classes.append(intent['tag'])
 
-model = tflearn.DNN(net)# train the model
+# lemmaztize and lower each word and remove duplicates
+words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
+words = sorted(list(set(words)))
+# sort classes
+classes = sorted(list(set(classes)))
+# documents = combination between patterns and intents
+print (len(documents), "documents")
+# classes = intents
+print (len(classes), "classes", classes)
+# words = all words, vocabulary
+print (len(words), "unique lemmatized words", words)
 
-# load the model
-# if the model is there, fine
-try:
-    model.load("model.tflearn")
+# pickle file to store python objects to use while predicting
+pickle.dump(words,open('words.pkl','wb'))
+pickle.dump(classes,open('classes.pkl','wb'))
 
-# if model is not found train it
-except:
-# Saving the model and printing its epoch
-    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")
-
-def bag_of_words(s, words):
-    bag = [0 for _ in range(len(words))]# creating blank bag of words list
-
-    s_words = nltk.word_tokenize(s)
+# create our training data that will provide input and output
+training = []
+# create an empty array for our output
+output_empty = [0] * len(classes)
+# training set, bag of words for each sentence
+for doc in documents:
+    # initialize our bag of words
+    bag = []
+    # list of tokenized words for the pattern
+    pattern_words = doc[0]
+    # lemmatize each word - create base word, in attempt to represent related words
+    pattern_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_words]
+    # create our bag of words array with 1, if word match found in current pattern
+    for w in words:
+        bag.append(1) if w in pattern_words else bag.append(0)
     
-    # change the elements according to if the word exists or not
-    s_words = [stemmer.stem(word.lower()) for word in s_words]
+    # output is a '0' for each tag and '1' for current tag (for each pattern)
+    output_row = list(output_empty)
+    output_row[classes.index(doc[1])] = 1
     
-    # generate the bag list properly
-    for se in s_words:
-        for i, w in enumerate(words):
-            
-            # if the word we are looking is there in the se
-            # make it 1
-            if w == se:
-                bag[i] = 1
-            
-    return numpy.array(bag)# return the bag of words
+    training.append([bag, output_row])
+# shuffle our features and turn into np.array
+random.shuffle(training)
+training = np.array(training)
+# create train and test lists. X - patterns, Y - intents
+train_x = list(training[:,0])
+train_y = list(training[:,1])
+print("Training data created")
 
-# this method will be our customer agent bot
-# this method is going to resposible for chatting
-def chat():
-    print("Start talking with the bot (type quit to stop)!")
-    while True:
-        inp = input("You: ")
-        if inp.lower() == "quit":# if the user enters quit then exit
-            break
 
-        # pass in the inout with the bag of words list
-        # this will give us back a probability
-        results = model.predict([bag_of_words(inp, words)])[0]
-        
-        # get the maximum probabilty result's index
-        # that particular index should be the response
-        results_index = numpy.argmax(results)
-       
-        # this will find the label from the labels list
-        tag = labels[results_index]
-        
-        # if the probability is over a certain number
-        # then move forward otherwise "I do not understand"
-        if results[results_index] > 0.7:
-            # from the intents find the tag 
-            for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']# get responses using the tag
-    
-            # get a random response under the tag
-            print(random.choice(responses))
-        else:
-            print("I do not understand,please try again!")
+# Create model - 3 layers. 
+# First layer 128 neurons, second layer 64 neurons and 
+# 3rd output layer contains number of neurons
+# equal to number of intents to predict output intent with softmax
+model = Sequential()
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(len(train_y[0]), activation='softmax'))
 
-# call the method to run the bot
-chat()
+# Compile model. Stochastic gradient descent with Nesterov accelerated gradient gives good results for this model
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+
+# fitting and saving the model 
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=300, batch_size=5, verbose=1)
+model.save('chatbot_model.h5', hist)
+
+print("model created")
