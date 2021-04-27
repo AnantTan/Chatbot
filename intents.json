@@ -25,7 +25,7 @@
          "context": [""]
         },
         {"tag": "keyboard",
-         "patterns": ["Lookup for hospital", "find me a keyboard", "I want a keyboard", "all keyboards", "Looking for a keyboard"],
+         "patterns": ["How many keyboard do you have", "find me a keyboard", "I want a keyboard", "all keyboards", "Looking for a keyboard"],
          "responses": ["We have mechanical and membrane keyboards"],
          "context": [""]
         },
@@ -35,7 +35,7 @@
          "context": [""]
         },
         {"tag": "mouse",
-         "patterns": ["I am looking for a mouse", "find me a mouse", "I want a mouse", "all mouse", "Looking for a mouse"],
+		 "patterns": ["I am looking for a mouse", "find me a mouse", "I want a mouse", "all mouse", "Looking for a mouse"],
          "responses": ["We have gaming and normal mouse"],
          "context": [""]
         },
@@ -52,6 +52,151 @@
 		{"tag": "monitor_price",
          "patterns": ["What is the price of monitors", "all monitors prices", "I want to know the price of monitors", "Tell me the prices of monitors", "monitor prices" ],
          "responses": ["Gaming monitors from $150, curved monitors from $200 and 4k monitors from $280"],
+         "context": [""]
+        },
+		{"tag": "troubleshoot_keyboard",
+         "patterns": ["My keyboard is not working", "keyboard not working", "The keyboard that i bought does not work", "There is some problem with my keyboard"],
+         "responses": ["Try plugging it in another port","Try reinstalling the keyboard driver","Restart you computer"],
+         "context": [""]
+        },
+		{"tag": "troubleshoot_mouse",
+         "patterns": ["My mouse is not working", "mouse not working", "The mouse that i bought does not work", "There is some problem with my mouse"],
+         "responses": ["Try changing the batteries","Use another usb port for the wireless adapter","Try cleaning the sensor of the mouse that is under it"],
+         "context": [""]
+        },
+		{"tag": "troubleshoot_monitor",
+         "patterns": ["My monitor is not working", "monitor not working", "The monitor that i bought does not work", "There is some problem with my monitor"],
+         "responses": ["Try restarting your computer","Try changing the HDMI cable","Check the power connection of the monitor","Check if the main light is open"],
+         "context": [""]
+        },
+		{"tag": "return_policy",
+         "patterns": ["What is the return policy", "return policy on your electronics", "I need to return a product", "can i return a product"],
+         "responses": ["We have a 30 days return policy on selected items","Selected items can be returned within 30 days","You can return selected items within 30 days of purchase"],
+         "context": [""]
+        },
+		{"tag": "return_monitor",
+         "patterns": ["I want to return my monitor", "return policy on monitor", "I will return the monitor", "can i return the monitor"],
+         "responses": ["You can return the monitor within 30 days"],
+         "context": [""]
+        },
+		{"tag": "return_keyboard",
+         "patterns": ["I want to return my keyboard", "return policy on keyboard", "I will return the keyboard", "can i return the keyboard"],
+         "responses": ["You can return the keyboard within 30 days"],
+         "context": [""]
+        },
+		{"tag": "return_mouse",
+         "patterns": ["I want to return my mouse", "return policy on mouse", "I will return the mouse", "can i return the mouse"],
+         "responses": ["You cannot return the mouse, we do not have a return policy on this product"],
+         "context": [""]
+        },
+		{"tag": "real_customer_agent",
+         "patterns": ["I want to talk to a human", "I want to talk a customer agent", "Pass me to a customer agent"],
+         "responses": ["Ok, forwarding you to the customer desk......"],
+         "context": [""]
+        },
+		{"tag": "idiot",
+         "patterns": ["You are an idiot", "You did not solve my problem", "You are useless","your company is useless"],
+         "responses": ["I am sorry to hear that","Sorry but, I try my best to fix your issues","Sorry about that!"],
+         "context": [""]
+        },
+		{"tag": "issue_solved",
+         "patterns": ["my issue has been resolved", "you solved my problem", "you are good, you solved my problem"],
+         "responses": ["I am glad to hear that","I just did my best"],
+         "context": [""]
+        },
+		{"tag": "name",
+         "patterns": ["What is your name", "your name", "can i know your name"],
+         "responses": ["Alpha Tech","My name is Alpha Tech"],
+         "context": [""]
+        },
+		{"tag": "robot",
+         "patterns": ["Are you a robot", "are you a bot", "you are a bot"],
+         "responses": ["I am a chatbot"],
+         "context": [""]
+        },
+		{"tag": "work",
+         "patterns": ["How does this work", "how do you work"],
+         "responses": ["I help our customers with electronic items","You ask me a question and I try to answer it"],
+         "context": [""]
+        },
+		{"tag": "order",
+         "patterns": ["Where is my order", "i need to find my order","my order is missing"],
+         "responses": ["You should call customer service for that"],
+         "context": [""]
+        },
+		{"tag": "store",
+         "patterns": ["I am looking for a store", "where is your store","do you have a store"],
+         "responses": ["We have several stores in the country","You can find them on our website's find a store column"],
+         "context": [""]
+        },
+		{"tag": "deals",
+         "patterns": ["what are the deals going on", "any deals","any discounts","any offers going on"],
+         "responses": ["We always have an offer going on for loyalty members","Yes, please check our website for more information"],
+         "context": [""]
+        },
+		{"tag": "holidays",
+         "patterns": ["Are you open on holidays", "holiday hours", "holidays opening hours"],
+         "responses": ["Our stores are closed but, I am here to help"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat",
+         "patterns": ["Do you have gaming mats", "I want a gaming mat","looking for a gaming mat"],
+         "responses": ["We have RGB gaming mats","We stalk RGB gaming mats"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_price",
+         "patterns": ["How much does a gaming cost", "price of gaming mat","how much is the gaming mat"],
+         "responses": ["RGB Gaming mat = $ 20"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_issue",
+         "patterns": ["My gaming mat is not lighting up", "no lights in the gaming mat","gaming mat not working"],
+         "responses": ["Try plugging it in another USB port","Make sure the USB ports are clean"],
+         "context": [""]
+        },
+		{"tag": "lamps",
+         "patterns": ["I need an office lamp", "all office lamps", "looking for an office lamp"],
+         "responses": ["We have various office lamps","We do have office lamps of different sizes"],
+         "context": [""]
+        },
+		{"tag": "lamps_price",
+         "patterns": ["how much does the lamp cost", "price of office lamps", "what is the price of office lamps"],
+         "responses": ["The lamps start from $15","Office lamps start from $15"],
+         "context": [""]
+        },
+		{"tag": "lamps_damaged",
+         "patterns": ["My lamp was damaged when it arrived", "my lamp is damaged", "my lamp got damaged on it's delivery"],
+         "responses": ["We can return it in 30 days", "You can return it in within 30 days"],
+         "context": [""]
+        },
+		{"tag": "good_products",
+         "patterns": ["Your products are great", "i love your products", "you have got nice electronics","really nice products"],
+         "responses": ["We are glad to hear that", "Thank you for saying so","We are glad you liked them"],
+         "context": [""]
+        },
+		{"tag": "delivery",
+         "patterns": ["my order has not been delivered", "its been days I have not received my order", "my order is missing"],
+         "responses": ["I am sorry to hear that, please call customer service","Please track your package and contact the delivery company"],
+         "context": [""]
+        },
+		{"tag": "docking_hub",
+         "patterns": ["I need a docking hub", "i am looking for a docking hub", "do you have dockinh hub"],
+         "responses": ["We have a 4 USB 3.0 1 HDMI USB-c docking hub"],
+         "context": [""]
+        },
+		{"tag": "docking_hub_price",
+         "patterns": ["how much is the docking hub", "what is the price of the docking hub", "price of the docking hub"],
+         "responses": ["Docking hub $25"],
+         "context": [""]
+        },
+		{"tag": "laptop_riser",
+         "patterns": ["Do you have a laptop riser", "I want a laptop riser", "I am looking for a laptop riser"],
+         "responses": ["Yes we do stock universal laptop risers"],
+         "context": [""]
+        },
+		{"tag": "laptop_riser_price",
+         "patterns": ["how much is the laptop riser", "what is the price of the laptop riser", "price of the laptop riser"],
+         "responses": ["Universal laptop riser $45"],
          "context": [""]
         }
    ]
