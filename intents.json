@@ -198,6 +198,106 @@
          "patterns": ["how much is the laptop riser", "what is the price of the laptop riser", "price of the laptop riser"],
          "responses": ["Universal laptop riser $45"],
          "context": [""]
+        },
+		{"tag": "keyboard_layout",
+         "patterns": ["is your keyboard UK layout or US layout", "I want a UK layout keyboard", "I am looking for a US layout keyboard"],
+         "responses": ["We have both UK and US based layout keyboard","We have the layout you are looking for and it can be found on our website"],
+         "context": [""]
+        },
+		{"tag": "keyboard_dimensions",
+         "patterns": ["what are the keyboard dimensions", "dimensions of the keyboard"],
+         "responses": ["Keyboards are available in the standard size 45cm X 20cm"],
+         "context": [""]
+        },
+		{"tag": "battey_operated_keyboards",
+         "patterns": ["Are the keyboards battery operated", "battery operated keyboards", "is it a battery operated keyboard"],
+         "responses": ["We do not stock or recommned battery operated keyboards","We only stock USB powered keyboards"],
+         "context": [""]
+        },
+		{"tag": "keyboard_brands",
+         "patterns": ["what keyboard brands do you have", "all keyboard brands"],
+         "responses": ["we have all the renowned brands such as Logitech, Corsair, Razer etc"],
+         "context": [""]
+        },
+		{"tag": "keyboard_feets",
+         "patterns": ["Do your keyboards have feet", "do keyboards have feet", "the keyboard should have feet"],
+         "responses": ["These days all keyboards come with feets","Yes you can adjust the height"],
+         "context": [""]
+        },
+		{"tag": "caps_num_lights",
+         "patterns": ["keyboard has lights for caps and num lock", "does the keyboard has lights for num lock and caps lock", "lights for num and caps lock"],
+         "responses": ["Yes all the keyboards will have lights for num and caps lock", "There is light present for caps and num lock"],
+         "context": [""]
+        },
+		{"tag": "keyboard_and_mouse",
+         "patterns": ["Does a mouse comes with the keyboard", "is there a mouse with the keyboard", "mouse included with the keyboard"],
+         "responses": ["No, you will have to buy a mouse seprately","No, but you might find some deals on your website"],
+         "context": [""]
+        },
+		{"tag": "headset_socket",
+         "patterns": ["Does the keyboard have headset sockets", "is there an earphone socket in the keyboard"],
+         "responses": ["No, they are just simple keyboard","No frills, just simple keyboards"],
+         "context": [""]
+        },
+		{"tag": "keyboard_with_tv",
+         "patterns": ["Is the keyboard going to work with tv", "can the keyboard work with tv", "will the keyboard work with a tv"],
+         "responses": ["Not sure, but if the tv has a USB port then it might"],
+         "context": [""]
+        },
+		{"tag": "laptop_riser",
+         "patterns": ["Do you have a laptop riser", "I want a laptop riser", "I am looking for a laptop riser"],
+         "responses": ["Yes we do stock universal laptop risers"],
+         "context": [""]
+        },
+		{"tag": "monitor_wall_mount",
+         "patterns": ["Is the monitor wall mountable", "can the monitor be mounted on the wall", "can i mount the monitor on the wall"],
+         "responses": ["All our monitors are wall mountable","All our monitors are wall mount compatible"],
+         "context": [""]
+        },
+		{"tag": "monitor_hdmi",
+         "patterns": ["Does the monitor icludes HDMI cable", "is there a HDMI cable with the monitor", "Is there a HDMI cable included","hdmi cable with the monitor"],
+         "responses": ["All monitors ship with one HDMI cable", "Yes there in a HDMI cable included with the monitor"],
+         "context": [""]
+        },
+		{"tag": "monitor_aux",
+         "patterns": ["Does the monitor has an AUX port", "is there an AUX port in the monitor", "aux port in the monitor"],
+         "responses": ["No there is no AUX port in the monitor", "No our monitors do not have AUX ports in them"],
+         "context": [""]
+        },
+		{"tag": "monitor_stand",
+         "patterns": ["Does the monitor has a stand", "is there a stand with the monitor to adjust its height", "will i get a stand with the monitor"],
+         "responses": ["Yes there is a stand included in the box", "Yes the height can be adjusted as there is a stand included"],
+         "context": [""]
+        },
+		{"tag": "monitor_60fps",
+         "patterns": ["What is the refresh rate of the monitor", "refresh rate of the monitor", "are all monitors 60FPS"],
+         "responses": ["Our monitors range from being 60FPS to 240FPs", "We have a range of monitors that have different refresh rate with 60FPS being the minimum"],
+         "context": [""]
+        },
+		{"tag": "monitor_usb",
+         "patterns": ["Does the monitor has an USB port", "is there an USB port in the monitor", "USB port in the monitor"],
+         "responses": ["No there is no USB port in the monitor", "No our monitors do not have USB ports in them"],
+         "context": [""]
+        },
+		{"tag": "monitor_remote",
+         "patterns": ["Does the monitor has a remote", "is there a remote with the monitor", "does the monitor comes with a remote"],
+         "responses": ["No there is remote included with the monitor", "No there is no remote"],
+         "context": [""]
+        },
+		{"tag": "monitor_power_cord",
+         "patterns": ["Does the monitor's power cord molded or detacthable", "is the power cord detacthable", "is the power cord molded"],
+         "responses": ["The power cord is detacthable"],
+         "context": [""]
+        },
+		{"tag": "monitor_camera",
+         "patterns": ["Does the monitor has a built in web cam", "is there a built in camera in the monitor", "web camera in the monitor"],
+         "responses": ["No there is no camera in the monitor", "No our monitors do not have web cameras in them"],
+         "context": [""]
+        },
+		{"tag": "monitor_speakers",
+         "patterns": ["Does the monitor has a built in speakers", "is there built in speakers in the monitor", "speakers in the monitor"],
+         "responses": ["Yes there are speakers in the monitor", "Yes some of our monitors have decent speakers"],
+         "context": [""]
         }
    ]
 }
