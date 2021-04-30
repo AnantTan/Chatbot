@@ -298,6 +298,206 @@
          "patterns": ["Does the monitor has a built in speakers", "is there built in speakers in the monitor", "speakers in the monitor"],
          "responses": ["Yes there are speakers in the monitor", "Yes some of our monitors have decent speakers"],
          "context": [""]
+        },
+		{"tag": "mouse_batteries",
+         "patterns": ["Does the mouse has rechargable batteries", "are mouse batteries rechargable", "is the mouse rechargable"],
+         "responses": ["No it is not rechargable", "No you will need to replace the batteries"],
+         "context": [""]
+        },
+		{"tag": "mouse_work_with_tv",
+         "patterns": ["Does the mouse work with tv", "is the mouse going to work with tv", "does it work with a tv"],
+         "responses": ["Not sure but if you TV has a USB port you can try pluggign it in"],
+         "context": [""]
+        },
+		{"tag": "mouse_work_with_chromebook",
+         "patterns": ["Does the mouse work with google chromebook", "is this mouse going to work with a google chromebook", "will the mouse work with chromebook"],
+         "responses": ["Yes it is a standard mouse so it should work with it"],
+         "context": [""]
+        },
+		{"tag": "mouse_mat",
+         "patterns": ["Do i need a mouse mat", "is the mouse going to work without a mouse mat", "is there a need of mouse mat"],
+         "responses": ["No a mouse mat is not required", "No you do not need a mouse mat"],
+         "context": [""]
+        },
+		{"tag": "proagram_mouse",
+         "patterns": ["How do i proagram the extra buttons on the mouse", "how to proagram the mouse", "proagramming the mouse"],
+         "responses": ["Download a program called mousemanager and do it", "You can program it using a program called mousemanager"],
+         "context": [""]
+        },
+		{"tag": "mouse_software",
+         "patterns": ["where can i find the software to program the mouse", "software for mouse"],
+         "responses": ["You can download it from the internet"],
+         "context": [""]
+        },
+		{"tag": "mouse_connects_internet_goes",
+         "patterns": ["why my internet disconnects when i connect the mouse", "my internet goes when i connect the mouse", "loosing internet when connecting the mouse"],
+         "responses": ["These things are not related to each other, there must be some other issue", "I do not know why is this happening"],
+         "context": [""]
+        },
+		{"tag": "no_led_in_mouse",
+         "patterns": ["there is not led flashing in my mouse", "no led flashes in mouse but it works fine", "no led flashing, is it normal"],
+         "responses": ["It is normal as long as the mouse works fine", "No problem, it is normal"],
+         "context": [""]
+        },
+		{"tag": "multi_screen_docking_hub",
+         "patterns": ["Does the hub works for multiple screens at once", "can i connect multiple screen with the hub"],
+         "responses": ["Yes, the docking hub will work with multiple screens"],
+         "context": [""]
+        },
+		{"tag": "docking_hub_with_phone",
+         "patterns": ["Will the hub work when connected to a phone", "can i connect the hub to a phone", "is the hub going to work when connected to a phone"],
+         "responses": ["If your phone supports it then it should work", "It might work if your phone has the requirements","It can work if it meets the requirements"],
+         "context": [""]
+        },
+		{"tag": "docking_hub_with_ubuntu",
+         "patterns": ["Does the hub works with Ubuntu", "is the hub compatible with ubuntu", "will the hub work with ubuntu"],
+         "responses": ["No currently it is not compatible with ubuntu", "Currently it only works with windows, macOS and Chrome OS"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_washable",
+         "patterns": ["is the gaming mat waterproof", "can i wipe the mat with wet cloth", "can i wash the mat with slightly damp cloth"],
+         "responses": ["Yes it is waterproof so you can wipe it with damp cloth"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_smell",
+         "patterns": ["is the smell of the mat good", "does the mat smells good or not", "how is the smell of the mat"],
+         "responses": ["Yes it has a good smell","It has some decent smell like all new prodcuts"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_color_change_automaticallly",
+         "patterns": ["can i set the color to change automatically", "will the color change automatically", "will it change the color automatically"],
+         "responses": ["Yes you can set the color to change automatically","Yes you can press the button to do that"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_modes",
+         "patterns": ["is there a flowing rainbow mode", "does the mat has flowing rainbow mode", "flowing rainbow mode in mat"],
+         "responses": ["Yes and it includes 3 dynamic mode","Yes it includes 1 rainbow and 2 breathing modes"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_color_static",
+         "patterns": ["is the gaming mat colors open static", "is the color running or open rgb", "running color or open rgb"],
+         "responses": ["There are 7 static colors and 3 dynamic modes","It has both running and static color modes"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_washable",
+         "patterns": ["is the gaming mat waterproof", "can i wipe the mat with wet cloth", "can i wash the mat with slightly damp cloth"],
+         "responses": ["Yes it is waterproof so you can wipe it with damp cloth"],
+         "context": [""]
+        },
+		{"tag": "gaming_mat_brightness",
+         "patterns": ["is the gaming mat bright enough", "how is the brightness of the mat", "how bright is the mat"],
+         "responses": ["Yes it is just bright enough and not dazzling","Yes it has just the right brightness"],
+         "context": [""]
+        },
+		{"tag": "home_projectors",
+         "patterns": ["do you have home projectors", "do you have projector", "do you sell projectors","all projectors"],
+         "responses": ["Yes we do stock projectors","Yes we sell projectors","We have Epson projectors"],
+         "context": [""]
+        },
+		{"tag": "home_projectors_price",
+         "patterns": ["how much is the projector", "what is the price of the projector", "price of projector"],
+         "responses": ["Projectors start from $320","The range starts from $320"],
+         "context": [""]
+        },
+		{"tag": "projector_tracing_art",
+         "patterns": ["can i use the projector for tracing art", "is the projector good enough for tracing art", "can it be used for tracing art"],
+         "responses": ["Yes ineed the details are good enough", "Yes the details should be good for that"],
+         "context": [""]
+        },
+		{"tag": "projector_hdmi",
+         "patterns": ["does the projector has hdmi port", "does it comes with hdmi port and cable", "does the projector ships with hdmi cable"],
+         "responses": ["Yes the projector has HDMI port but it does not comes with a cable"],
+         "context": [""]
+        },
+		{"tag": "projector_works_in_light",
+         "patterns": ["will the projector work in daylight", "will the projector work in a room with lights","can it work under normal lights"],
+         "responses": ["Yes even in bright rooms it is powerful enough to deliver exceptional results"],
+         "context": [""]
+        },
+		{"tag": "projector_to_phone",
+         "patterns": ["can i screen mirror my phone to this projector", "can i project my phone using this projector", "will this projector work with my phone"],
+         "responses": ["Sorry, this unit does not have screen mirror option in it"],
+         "context": [""]
+        },
+		{"tag": "projector_zoom",
+         "patterns": ["does the projector has zoom", "can i zoom the image using the projector", "does the projector supports zoom"],
+         "responses": ["Yes the projector has got digital zooming functionality"],
+         "context": [""]
+        },
+		{"tag": "projector_remote_freeze",
+         "patterns": ["does the projectors remote has a freeze option", "is there a freeze option in the projector's remote"],
+         "responses": ["Yes the remote does have the freeze function"],
+         "context": [""]
+        },
+		{"tag": "projector_bluetooth",
+         "patterns": ["does the projector has bluetooth", "will the projector have bluetooth","is there bluetooth in the projector"],
+         "responses": ["No there is no bluetooth in the projector","No the projector does not have bluetooth"],
+         "context": [""]
+        },
+		{"tag": "projection_length",
+         "patterns": ["what is the maximum projection distance", "how far can the projector be from the screen","can i use the projector from 5 mts away"],
+         "responses": ["The maximum projection distance is 6 meters, however the distance effects the screen size"],
+         "context": [""]
+        },
+		{"tag": "projector_quality",
+         "patterns": ["is the projector 4k full hd or hd", "what is the projector's resolution"],
+         "responses": ["This projector uses a 3LCD technology","It is neither 4k, FHD or HD, it uses 3LCD tech"],
+         "context": [""]
+        },
+		{"tag": "projector_to_tv",
+         "patterns": ["does the projector has the functionality to connect to TV", "can i connect the projector to a TV","will the projector work with tv"],
+         "responses": ["Yes if you can find a compatible interface","Yes it connects and work with a TV using the supported interface"],
+         "context": [""]
+        },
+		{"tag": "home_printer",
+         "patterns": ["do you have home printer", "do you have printers", "do you sell printers","all printer"],
+         "responses": ["Yes we do stock printers","Yes we sell printers","We have HP printers"],
+         "context": [""]
+        },
+		{"tag": "home_printers_price",
+         "patterns": ["how much is the printer", "what is the price of the printer", "price of printer"],
+         "responses": ["Printers start from $78","The range starts from $78"],
+         "context": [""]
+        },
+		{"tag": "printer_not_closing",
+         "patterns": ["opened it to change the ink and now it won't close", "it doesn't close after changing ink", "printer not closing after changing the ink"],
+         "responses": ["Check if the cartilages are in right","Make sure you have the cartilages in the correct manner"],
+         "context": [""]
+        },
+		{"tag": "printer_sd_slot",
+         "patterns": ["does the printer has sd card slot", "is there a sd card slot in the printer", "card slot in printer"],
+         "responses": ["Not all the printers have it","Yes there is but not in the base ones"],
+         "context": [""]
+        },
+		{"tag": "printer_with_ink",
+         "patterns": ["does the printer comes with ink", "is there already some ink in the printer", "ink already in printer"],
+         "responses": ["Yes it comes with a little bit of ink","Yes there is some ink in the printer"],
+         "context": [""]
+        },
+		{"tag": "printer_wired",
+         "patterns": ["can i connect the printer using a usb", "i do not have wireless on my pc for the printer", "will it work if connected wired"],
+         "responses": ["Yes you can use USB to connect it and it will work","Yes it works when connected wired"],
+         "context": [""]
+        },
+		{"tag": "printer_with_ipad",
+         "patterns": ["is the printer compatible with ipad", "can i use the printer with my ipad", "is the printer going to work with my ipad"],
+         "responses": ["Yes absolutely no problem working with ipad","Yes it work with ipad"],
+         "context": [""]
+        },
+		{"tag": "printer_quality",
+         "patterns": ["does the printer has a good quality", "is there quality prints in the printer", "how are the prints with this printer"],
+         "responses": ["Print quality is good with this printer","Yes the prints are decent"],
+         "context": [""]
+        },
+		{"tag": "printer_plugs",
+         "patterns": ["does the printer has UK or european plug", "is there a UK or European plug in the printer", "uk or european plug with the printer"],
+         "responses": ["The printer comes with both UK and European plugs"],
+         "context": [""]
+        },
+		{"tag": "printer_paper_load",
+         "patterns": ["does the printer loads paper from drawer or top", "is it a drawer or top loading printer", "drawer or top loading printer"],
+         "responses": ["There is a drawer to load to the paper"],
+         "context": [""]
         }
    ]
 }
