@@ -698,6 +698,106 @@
          "patterns": ["are the handles of the chair detacthable", "arm detacthable of the chair", "can i remove the arms of the chair"],
          "responses": ["No the arms of the chair are not detacthable","No they are fixed"],
          "context": [""]
+        },
+		{"tag": "bluetooth_speaker",
+         "patterns": ["do you have bluetooth speaker", "do you stock bluetooth speakers", "do you sell bluetooth speakers","all bluetooth speakers","all speakers"],
+         "responses": ["Yes we do stock bluetooth speakers","Yes we sell bluetooth speakers","We have bluetooth speakers"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speakers_type",
+         "patterns": ["all bluetooth speakers", "which bluetooth speakers do you have", "i want a bluetooth speaker", "i want to buy a bluetooth speaker"],
+         "responses": ["We have bluetooth speakers from JBL and Bose"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_fit",
+         "patterns": ["will the speaker fit in my cycle cage", "is the speaker going to fit in my cycle cage", "can the speaker fit in my cycle cage"],
+         "responses": ["Yes it will, great for commute"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_usb",
+         "patterns": ["will the speaker come with usb", "is the speaker going to come with usb", "usb with speaker","does the usb comes with the speaker"],
+         "responses": ["Yes the USB is included in the box","Yes it comes with USB in original JBL packaging"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_powerbank",
+         "patterns": ["will the speaker work as a powerbank too", "is the speaker going to work as powerbank too", "can i use the speaker as a powerbank", "speaker as a powerbank"],
+         "responses": ["Yes this function is founf in JBL charge series"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_mic",
+         "patterns": ["will the speaker connect a mic", "is possible to connect a mic to the speaker", "can the speaker connect a mic","connect a mic to the speaker"],
+         "responses": ["If your mic has a bluetooth then yes"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_with_laptop",
+         "patterns": ["will the speaker connect to laptop", "is possible to connect a laptop witht the speaker", "can the speaker connect a laptop","connect a laptop to the speaker"],
+         "responses": ["Yes it works absolutely fine with a laptop"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_sound_quality",
+         "patterns": ["how is the sound quality of the speakers", "quality of sound from the speakers", "is the sound quality good from the speakers"],
+         "responses": ["Yes the sound quality is good along with decent bass"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_automatic_power_down",
+         "patterns": ["will the speaker shut down automatically", "does the speakers automatically shuts down", "can the speaker shut down automatically","automatic shut down speaker"],
+         "responses": ["When not in use it shuts down itself after a while"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_watts",
+         "patterns": ["how many watts is the speaker", "speaker watts", "watt output of the speakers"],
+         "responses": ["It is a 16 watt speaker"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_with_aux",
+         "patterns": ["will the speaker come with aux", "is there an aux cable with the speaker", "aux with speaker"],
+         "responses": ["Aux cable is not shipped with the speaker"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_warranty",
+         "patterns": ["will the speaker be warranted", "is the speaker warrented", "warranty of the speaker"],
+         "responses": ["It comes with a 12 month world wide warranty"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_sd_card",
+         "patterns": ["will the speaker support sd card", "is it possible to insert a sd card in the speaker", "sd card with the speaker","does it supports sd card"],
+         "responses": ["No SD card is not supported with the speakers"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_charger",
+         "patterns": ["will the speaker come with the charger", "is the speaker going to come with a charger", "charger with the speaker"],
+         "responses": ["The charging USB is included not the wall adapter","Yes the USB is included which works with you wall adapter"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_waterpoof",
+         "patterns": ["will the speaker be waterproof", "is the speaker waterproof", "waterproof speaker"],
+         "responses": ["Yes the speaker is waterproof"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_battery",
+         "patterns": ["how long does the battery last of the speaker", "how long does it run on one charge", "battery of the speaker"],
+         "responses": ["It works for nearly 10 hours on one full charge"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_pen_drive",
+         "patterns": ["will the speaker connect a pen drive", "is it possible to connect a pen drive to the speaker", "can the speaker connect a pen drive","connect a pen drive to the speaker"],
+         "responses": ["It does not play songs directly from the storage"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_connect_two",
+         "patterns": ["can 2 of these connected together", "is it possible to connect two speakers together", "connect 2 speakers together","2 speakers together connected"],
+         "responses": ["Yes it is possible to connect them together","You can connect them together using JBL connect"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_while_charging",
+         "patterns": ["will the speaker play while charging", "is it possible to play music while the speaker is charging", "can the speaker play while on charge","play music while speaker on charge"],
+         "responses": ["Yes it can play music while on charge","It plays while it is on charge"],
+         "context": [""]
+        },
+		{"tag": "bluetooth_speaker_diameter",
+         "patterns": ["how wide is the speaker", "width of the speaker", "what is the width of the speaker"],
+         "responses": ["It is 70mm wide at its widest","60mm minimum and 70mm at its max"],
+         "context": [""]
         }
    ]
 }
