@@ -498,6 +498,206 @@
          "patterns": ["does the printer loads paper from drawer or top", "is it a drawer or top loading printer", "drawer or top loading printer"],
          "responses": ["There is a drawer to load to the paper"],
          "context": [""]
+        },
+		{"tag": "home_shredder",
+         "patterns": ["do you have home shredder", "do you have shredder", "do you sell shredder","all shredders"],
+         "responses": ["Yes we do stock shredder","Yes we sell shredder","We have Fellowes Powershred"],
+         "context": [""]
+        },
+		{"tag": "home_shredder_price",
+         "patterns": ["how much is the shredder", "what is the price of the shredder", "price of shredder"],
+         "responses": ["Shredders start from $50","The range starts from $50"],
+         "context": [""]
+        },
+		{"tag": "shred_cardboard",
+         "patterns": ["can i shred cardboard", "can it shred cardboard", "can it shred harder card"],
+         "responses": ["Yes it can shred thicker card but not carboard from boxes"],
+         "context": [""]
+        },
+		{"tag": "shredder_standby",
+         "patterns": ["does the shredder have standby mode", "is there a standby mode in the shredder", "standby mode in shredder"],
+         "responses": ["No there is no standby mode but it has locks"],
+         "context": [""]
+        },
+		{"tag": "shredder_oil",
+         "patterns": ["does the shredder comes with oil", "is there oil already in the shredder", "oil ships with shredder"],
+         "responses": ["No it does not comes with oil","No, oil is a separate order"],
+         "context": [""]
+        },
+		{"tag": "shredder_which_oil",
+         "patterns": ["which oil to get for the shredder", "which oil and where to get it for the shredder", "which oil should i get for the shredder"],
+         "responses": ["Fellowes Performance oil available from Amazon"],
+         "context": [""]
+        },
+		{"tag": "shredder_turn_of",
+         "patterns": ["does the shredder shuts down after a while", "is there an automatic shutdown for the shredder", "automatically shutdown shredder"],
+         "responses": ["It will shutdown after 3 minutes","It shuts down after 3 minutes to protect internal from overheating"],
+         "context": [""]
+        },
+		{"tag": "shredder_paper_number",
+         "patterns": ["how many can it cut at a time", "number of papers at a time", "total number of papers it can shred"],
+         "responses": ["It can shred around 8-10 papers at a time","8-10 papers at a time"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones",
+         "patterns": ["do you have gaming headphones", "do you stock gaming headphonesq", "do you sell gaming headphones","all gaming headphones"],
+         "responses": ["Yes we do stock gaming headphones","Yes we sell gaming headphones","We have gaming headphones"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_price",
+         "patterns": ["how much are gaming headphones", "what is the price of the gaming headphones", "price of gaming headphones"],
+         "responses": ["Gaming headphones start from $75","The range starts from $75"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_noise_cancelling",
+         "patterns": ["do these headphones have noise cancelling", "is there noise cancelling in the headphones", "noise cancelling in headphones"],
+         "responses": ["No these gaming headphones do not have noise cancelling","They are start from $180"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_with_nintendo_switch",
+         "patterns": ["will these headphones work with nintendo", "can these headphones work with nintendo", "do these headphones work with nintendo switch"],
+         "responses": ["Yes they work with the right adapter","Yes they can work if you have the right adapter"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_button_volume",
+         "patterns": ["can i adjust volume in these headphones", "do these headphones have a volume button", "volume button on the headphones"],
+         "responses": ["Yes these headphones have a volume button","There is a volume button in these headphones"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_sound_quality",
+         "patterns": ["will these headphones have good sound", "can these headphones produce good enough sound", "are they good sounding headphones","how is the sound of these headphones"],
+         "responses": ["Yes the sound is great according to the price","The sound is good and crisp"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_comfort",
+         "patterns": ["will these headphones be comfortable", "are these headphones comfortable", "do these headphones cause pain in your ears"],
+         "responses": ["These headphones are quite comfortable to wear"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_have_mic",
+         "patterns": ["will these headphones have a mic", "can i speak using these headphones", "do these headphones have mic"],
+         "responses": ["Yes they do have a mic","Yes they have a mic for speaking"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_color_cycles",
+         "patterns": ["will these headphones change color", "can i just keep one color on the headphones", "do these headphones change color"],
+         "responses": ["These headphones constantly cycle colours"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_with_mac",
+         "patterns": ["will these headphones work with mac", "can i use these headphones with mac", "do these headphones work with mac","are these headphones compatible with mac"],
+         "responses": ["Yes they are compatible with mac","Yes these headphones work with mac"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_wireless",
+         "patterns": ["will these headphones work wireless", "wireless headphones", "are these headphones wireless"],
+         "responses": ["No they are not wireless"],
+         "context": [""]
+        },
+		{"tag": "gaming_headphones_lights_not_work",
+         "patterns": ["the lights do not work on these headphones", "how to light up these headphones", "how do these headphones ligh up"],
+         "responses": ["Make sure you have the USB plugged in as well","Plug in the USB to light it up"],
+         "context": [""]
+        },
+		{"tag": "headphones",
+         "patterns": ["do you have headphones", "do you stock headphones", "do you sell headphones","all headphones with mic","all headphones"],
+         "responses": ["Yes we do stock headphones","Yes we sell headphones","We have headphones with microphone","We have gaming and normal headphones"],
+         "context": [""]
+        },
+		{"tag": "headphones_price",
+         "patterns": ["how much are the normal headphones", "what is the price of headphones", "price of headphones","price of normal headphones"],
+         "responses": ["Normal headphones start from $40","The range starts from $40"],
+         "context": [""]
+        },
+		{"tag": "headphones_noise_cancelling",
+         "patterns": ["do these normal headphones have noise cancelling", "is there noise cancelling in the normal headphones", "noise cancelling in normal headphones"],
+         "responses": ["No these normal headphones do not have noise cancelling","They are start from $120"],
+         "context": [""]
+        },
+		{"tag": "headphones_adjustble",
+         "patterns": ["can i adjust the headphones", "can these headphones be adjusted according to the head", "are the headphones adjustable"],
+         "responses": ["Yes you can slide them up and down to adjust it","Yes these headphones are adjustable"],
+         "context": [""]
+        },
+		{"tag": "headphones_sponge_replacable",
+         "patterns": ["can i change the sponge on the earpiece", "can the sponge be changed on the headphones", "are the sponge changeable on the headphones"],
+         "responses": ["Yes it is easily changeable","Yes they can be changed easily"],
+         "context": [""]
+        },
+		{"tag": "headphones_mic_muted",
+         "patterns": ["can i mute the mic from the headphones", "can the mic be muted using these headphones", "mute mic from the headphones"],
+         "responses": ["No it can be only be muted from the device it is connected to","You can mute it from the connected device"],
+         "context": [""]
+        },
+		{"tag": "headphones_wire_length",
+         "patterns": ["how long is the wire of the headphones", "headphones wire length", "what is the length of the headphones"],
+         "responses": ["The wire is about 2 metres long","It is nearly 2 metres long"],
+         "context": [""]
+        },
+		{"tag": "office_chair",
+         "patterns": ["do you have office chairs", "do you stock chairs", "do you sell office chairs","all office chairs","all chairs"],
+         "responses": ["Yes we do stock office chairs","Yes we sell chairs for offices","We have office chairs"],
+         "context": [""]
+        },
+		{"tag": "chair_price",
+         "patterns": ["how much are the office chairs", "what is the price of chairs", "price of office chairs","price of chairs"],
+         "responses": ["Office chairs start from $70","The range starts from $70"],
+         "context": [""]
+        },
+		{"tag": "chair_arms_height",
+         "patterns": ["what is the arm height of the chair", "arm height of the chair", "how high are the arms in the chair"],
+         "responses": ["58cm lowest and 68cm highest from the ground"],
+         "context": [""]
+        },
+		{"tag": "chair_logo",
+         "patterns": ["where is the logo on the chair", "is there any logo on the chair", "logo on the chair"],
+         "responses": ["There is a logo on the back of the chair"],
+         "context": [""]
+        },
+		{"tag": "chair_arms_height",
+         "patterns": ["what is the arm height of the chair", "arm height of the chair", "how high are the arms in the chair"],
+         "responses": ["58cm lowest and 68cm highest from the ground"],
+         "context": [""]
+        },
+		{"tag": "chair_seller_info",
+         "patterns": ["what is contact of the seller", "how do i contact the seller of this chair", "i want to speak to the seller of the chair"],
+         "responses": ["You can contact our customer care"],
+         "context": [""]
+        },
+		{"tag": "chair_recline",
+         "patterns": ["what is the recline angle of the chair", "recline angle of the chair", "how back can the chair recline"],
+         "responses": ["It can recline to a max of 8 degrees"],
+         "context": [""]
+        },
+		{"tag": "chair_levers",
+         "patterns": ["how many levers are there in the chair", "number of levers in the chair", "all levers on the chair"],
+         "responses": ["There is only 1 lever to adjust the chair up and down"],
+         "context": [""]
+        },
+		{"tag": "chair_falling_back",
+         "patterns": ["what is fix for the chair falling back when sitting on it", "chair falls back when i sit", "how do i stop falling back from the chair when i sit"],
+         "responses": ["Take it apart and put it together again","Some screws must be loose, take it apart and put it back again"],
+         "context": [""]
+        },
+		{"tag": "chair_guarantee_warranty",
+         "patterns": ["what is gurantee or warranty with the chair", "gurantee or warranty with the chair", "do i get some gurantee or warranty with for the chair"],
+         "responses": ["No, contact us and we will fix the issue"],
+         "context": [""]
+        },
+		{"tag": "chair_fire_compliance",
+         "patterns": ["what is the fire compliance of the chair", "fire compliance with the chair", "does the chair have the minimum fire compliance"],
+         "responses": ["No the chair does not have any fire compliance"],
+         "context": [""]
+        },
+		{"tag": "chair_widht",
+         "patterns": ["what is widht of the chair", "arm width of the chair", "how wide is the chair","width of the chair"],
+         "responses": ["It is 65cms wide from outside of the arm rest"],
+         "context": [""]
+        },
+		{"tag": "chair_handles_detachable",
+         "patterns": ["are the handles of the chair detacthable", "arm detacthable of the chair", "can i remove the arms of the chair"],
+         "responses": ["No the arms of the chair are not detacthable","No they are fixed"],
+         "context": [""]
         }
    ]
 }
