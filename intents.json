@@ -898,6 +898,106 @@
          "patterns": ["does the web cam wroks with macs", "is the web cam compatible with mac", "mac with this web cam","how does this web cam performs with mac"],
          "responses": ["It works fine", "Sometimes it can be a little laggy"],
          "context": [""]
+        },
+		{"tag": "digital_writing_board",
+         "patterns": ["do you have digital writing board", "do you stock digital writing board", "do you sell digital writing board","all digital writing boards"],
+         "responses": ["Yes we do stock digital writing board","Yes we sell digital writing board","We have digital writing board"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_price",
+         "patterns": ["how much is the digital writing board", "what is the price of digital writing board", "digital writing board price","price of digital writing board"],
+         "responses": ["Digital writing board start from $15"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_cover",
+         "patterns": ["is there a cover for digital writing board", "is there a case for digital writing board", "digital writing board cover"],
+         "responses": ["No there is no cover of the digital writing board"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_saves",
+         "patterns": ["does the digital writing board saves drawings", "is there a saving option in digital writing board", "digital writing board saves drawings"],
+         "responses": ["No there is no saving option","No it does not saves your drawings"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_print",
+         "patterns": ["is there an option to print drawings digital writing board", "is there a way to print digital writing board drawings", "digital writing board print drawings"],
+         "responses": ["No you cannot print the drawrings"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_battery",
+         "patterns": ["is there a battery included digital writing board", "is battery included with digital writing board", "digital writing battery"],
+         "responses": ["Yes there is a battery icluded with it"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_guarantee",
+         "patterns": ["is there a gurantee with digital writing board", "any gurantee with digital writing board", "digital writing board gurantee"],
+         "responses": ["No there is no gurantee with this product"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_colors",
+         "patterns": ["is there an option to choose colors digital writing board", "how many colors are there of digital writing board drawings", "digital writing board colors"],
+         "responses": ["There is only 1 color","No you cannot choose colors as there is only one"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_rechargabe",
+         "patterns": ["is there an option to recharge digital writing board", "can the batteries be recharged of digital writing board drawings", "digital writing board rechargable"],
+         "responses": ["No you cannot recharge it","It uses CR2016 coin battery, not rechargable"],
+         "context": [""]
+        },
+		{"tag": "digital_writing_pen,
+         "patterns": ["is there an option to attach the pen of digital writing board", "how to attach the pen to digital writing board drawings", "attach pen to digital writing board"],
+         "responses": ["There is a place to attach the pen on the side of the board"],
+         "context": [""]
+        },
+		{"tag": "portable_fan",
+         "patterns": ["do you have portable fans", "do you stock portable fans", "do you sell portable fans","all portable fans"],
+         "responses": ["Yes we do stock portable fans","Yes we sell portable fans","We have portable fans"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_price",
+         "patterns": ["how much is the portable fans", "what is the price of portable fans", "portable fans price","price of portable fans"],
+         "responses": ["Portable fans start from $16"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_battery_operated",
+         "patterns": ["is the fan battery operated or usb operated", "does fan works on usb or battery power", "usb or battery operated fan"],
+         "responses": ["You can use the fan with either the battery or USB","The fan works with both on battery and USB"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_colors",
+         "patterns": ["is the fan available in different colors", "does the fan has different colors", "colors for the fan"],
+         "responses": ["The fan is available only in black colour","There is only one color, black"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_battery_lifr",
+         "patterns": ["how long the does the battery last", "does the fan has good battery", "battery life of the fan"],
+         "responses": ["Battery is quite ood","On full charge, 5 hours at medium and 7 hours at low"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_clean",
+         "patterns": ["how to clean the fan", "is there a way to clean the fan blades", "clean the fan"],
+         "responses": ["Just use a brush to wipe off the dust","You can clean it with a brush"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_auto_switch_off",
+         "patterns": ["is there an auto switch off option in the fan", "does the fan switches off automatically", "auto switch off fan"],
+         "responses": ["No the fan does not have an auto switch off option","There is no auto swtich off option"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_usb_cable",
+         "patterns": ["how long is the usb cable of the fan", "length of the usb cable of the fan", "usb length of the fan"],
+         "responses": ["It is 1.2 metres long","There USB is 1.2 metres"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_removable_battery",
+         "patterns": ["is the fan battery removable", "can i remove the battery of the fan", "remove battery of the fan"],
+         "responses": ["No you cannot remove the battery, it is rechargable"],
+         "context": [""]
+        },
+		{"tag": "portable_fans_not_working",
+         "patterns": ["the fan is not working", "why is my fan not working", "fan not working","fan not starting"],
+         "responses": ["Restart your machine, clean you port, plug it again","Make sure it is charged"],
+         "context": [""]
         }
    ]
 }
