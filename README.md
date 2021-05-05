@@ -23,7 +23,8 @@ As well have reported issues like:
 point
 ● Slow Customer support, because of limited staff.
 ● Not available all the time.
-Figure 2.User and Chatbot InteractionProject by: AlphaTech P a g e 14 | 56
+Figure 2.User and Chatbot Interaction
+
 So having these issues in mind we wanted to Develop a Chatbot that can be part of any E-commerce
 websites Customer support service, more specifically an AI chatbot that can perform certain real 
 human tasks in customer support by answering customer queries via text message interfaces. This 
