@@ -798,6 +798,106 @@
          "patterns": ["how wide is the speaker", "width of the speaker", "what is the width of the speaker"],
          "responses": ["It is 70mm wide at its widest","60mm minimum and 70mm at its max"],
          "context": [""]
+        },
+		{"tag": "bluetooth_speaker_price",
+         "patterns": ["how much is the bluetooth speaker", "what is the price of bluetooth speakers", "bluetooth speakers price","price of bluetooth speakers"],
+         "responses": ["Bluetooth speakers start from $99"],
+         "context": [""]
+        },
+		{"tag": "webcam",
+         "patterns": ["do you have web cams", "do you stock web cameras", "do you sell web cam","all web cam"],
+         "responses": ["Yes we do stock bluetooth speakers","Yes we sell bluetooth speakers","We have bluetooth speakers"],
+         "context": [""]
+        },
+		{"tag": "webcam_price",
+         "patterns": ["how much is the web cam", "what is the price of web cameras", "web cam price","price of web cameras"],
+         "responses": ["Web cameras start from $50"],
+         "context": [""]
+        },
+		{"tag": "webcam_speakers",
+         "patterns": ["does the web cam has built in speakers", "are there built in speakers in the web cam", "built in speakers in web cam","speakers in web cam"],
+         "responses": ["This web cam has a built in Mic but no built in speaker"],
+         "context": [""]
+        },
+		{"tag": "webcam_crop",
+         "patterns": ["does the web records in 4:3 or 16:9", "what is the crop of the web cam", "does the web cam records in portrait or landscape mode","web cam portrait or landscape mode"],
+         "responses": ["This web cam records in 16:9 that is landscape mode"],
+         "context": [""]
+        },
+		{"tag": "webcam_different_mic",
+         "patterns": ["does the web cam offers ability to disable the mic", "can i disable the mic in the web cam", "can i use another mic in web cam", "different mic for web cam"],
+         "responses": ["Yes you can disable the mic and use a different one"],
+         "context": [""]
+        },
+		{"tag": "webcam_underside_monitor",
+         "patterns": ["does the web cam can be attached to the underside of the monitor", "can the web cam be placed underside of the monitor", "underside monitor web cam"],
+         "responses": ["No you cannot do that","No there is no such attachment"],
+         "context": [""]
+        },
+		{"tag": "webcam_driver",
+         "patterns": ["how to install the driver for the web cam", "do i need a driver for the web cam", "driver for the web cam"],
+         "responses": ["You do need a driver for the web cam","No, try unplugging and plugging it back in"],
+         "context": [""]
+        },
+		{"tag": "webcam_recording_format",
+         "patterns": ["does the web cam records in other format than mp4", "recording formats in the web cam", "how not to record in mp4 in web cam"],
+         "responses": ["Use different video capture softwares to change the recording formats"],
+         "context": [""]
+        },
+		{"tag": "webcam_privacy_tape",
+         "patterns": ["does the web cam has built in privacy cover", "are there built in privacy cover in the web cam", "built in privacy cover in web cam","privacy cover in web cam"],
+         "responses": ["No there is no built in privacy cover"],
+         "context": [""]
+        },
+		{"tag": "webcam_angle",
+         "patterns": ["what is the viewing angle of the lense", "view angle of the web cam", "web cam viewing angle"],
+         "responses": ["The viewing angle is fixed at 85 degrees"],
+         "context": [""]
+        },
+		{"tag": "webcam_tripod",
+         "patterns": ["does the web cam has a tripod mount", "is there tripod mount for the web cam", "tripod mount in the web cam"],
+         "responses": ["No it has just the screen mount"],
+         "context": [""]
+        },
+		{"tag": "webcam_cable_length",
+         "patterns": ["how long is the web cam wire", "what is the length of usb for web cam", "web cam's usb length","usb length for the web cam"],
+         "responses": ["The USB cable is 70 inches long"],
+         "context": [""]
+        },
+		{"tag": "webcam_with_phone",
+         "patterns": ["does the web cam can be used with the phone", "is the web cam compatible with a phone", "web cam on a phone","facetime with web cam"],
+         "responses": ["No it cannot be used with a phone","The web cam is not compatible with a phone"],
+         "context": [""]
+        },
+		{"tag": "webcam_usb_type",
+         "patterns": ["does the web cam has usb c or usb 3.0", "what type of usb does the web cam uses", "usb type of the web cam"],
+         "responses": ["The web cam uses the standard USB type A"],
+         "context": [""]
+        },
+		{"tag": "webcam_led_light",
+         "patterns": ["does the web cam led light is always on or only when it is capturing", "is the light of the web cam always on", "light of the web cam", "when is the led light in the web cam on"],
+         "responses": ["The led light is only on when the camera is capturing","Web cam's led is only on when it is capturing"],
+         "context": [""]
+        },
+		{"tag": "webcam_color_washed",
+         "patterns": ["web cam color is being washed out", "not getting proper colors with the web cam", "colors are being grayed out", "web cam color problems"],
+         "responses": ["Please contact customer care for the issue","Try restarting your machine"],
+         "context": [""]
+        },
+		{"tag": "webcam_ps4",
+         "patterns": ["does the web cam works with ps4 pro", "is the web cam going to work with ps4 pro", "ps4 with the web cam"],
+         "responses": ["No the web cam will not work with ps4"],
+         "context": [""]
+        },
+		{"tag": "webcam_refresh_rate",
+         "patterns": ["does the web cam has 60fps", "what is refresh rate of the web cam", "60fps web cam","refresh rate of the web cam"],
+         "responses": ["The refresh rate of the web is 60FPS","The web works at 60FPS"],
+         "context": [""]
+        },
+		{"tag": "webcam_with_macs",
+         "patterns": ["does the web cam wroks with macs", "is the web cam compatible with mac", "mac with this web cam","how does this web cam performs with mac"],
+         "responses": ["It works fine", "Sometimes it can be a little laggy"],
+         "context": [""]
         }
    ]
 }
