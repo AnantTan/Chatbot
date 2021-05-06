@@ -92,7 +92,7 @@ base.geometry("400x500")
 base.resizable(width=FALSE, height=FALSE)
 
 #Create Chat window
-ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Arial",)
+ChatLog = Text(base, bd=0, bg="white", height="8", width="60", font="Arial",)
 
 ChatLog.config(state=DISABLED)
 
